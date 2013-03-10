@@ -1,10 +1,6 @@
 package br.eti.clairton.troco;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -20,6 +16,10 @@ public class Troco {
     }
 
     public static Set<Moeda> calcular(Double valorEntrada) {
+        //como as variaveis de quantidade sao estatica, devem ser zeradas
+        for (Moeda moeda : Moeda.values()) {
+            moeda.setQuantidade(0);
+        }
         Set<Moeda> retorno = new LinkedHashSet<>();
         Double valorRestante = valorEntrada;
         for (Moeda moeda : Moeda.values()) {

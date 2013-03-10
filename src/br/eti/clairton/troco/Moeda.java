@@ -1,7 +1,5 @@
 package br.eti.clairton.troco;
 
-import java.math.BigDecimal;
-
 
 /**
  * Enum da possiveis notas de troco.
